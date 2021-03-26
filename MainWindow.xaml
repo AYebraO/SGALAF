@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGALAF"
         mc:Ignorable="d"
-        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="450" Width="800">
-    <Grid Margin="0,0,0,-6">
-        <Label Content="Sistema de Control de Audios" HorizontalAlignment="Left" Height="34" Margin="35,10,0,0" VerticalAlignment="Top" Width="690"/>
+        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="739" Width="1205">
+    <Grid Margin="10,10,10,3">
+        <Label Content="Sistema de Control de Audios del Laboratorio de Acustica Forense" HorizontalAlignment="Left" Height="34" Margin="25,7,0,0" VerticalAlignment="Top" Width="690" FontSize="20" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="70,49,0,0" Text="1-21-CLII-LAF" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="caso:_&#xD;&#xA;" HorizontalAlignment="Left" Height="25" Margin="25,49,0,0" VerticalAlignment="Top" Width="40"/>
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="40" Margin="25,44,0,0" VerticalAlignment="Top" Width="735">
@@ -16,6 +16,20 @@
         <Label Content="Propietario:&#xD;&#xA;" HorizontalAlignment="Left" Height="30" Margin="205,49,0,0" VerticalAlignment="Top" Width="105"/>
         <Label Content="Expediente:" HorizontalAlignment="Left" Height="26" Margin="480,48,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="295,52,0,0" Text="Noemi Gonzalez" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="185" Margin="25,89,0,0" VerticalAlignment="Top" Width="735">
+            <Label Content="Nombre:" HorizontalAlignment="Left" Height="30" Margin="9,9,0,0" VerticalAlignment="Top" Width="65"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="200" Margin="25,279,0,0" VerticalAlignment="Top" Width="735">
+            <TextBox HorizontalAlignment="Left" Height="25" Margin="74,-180,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="185" Margin="25,89,0,0" VerticalAlignment="Top" Width="735">
+            <Label Content="Genero:" HorizontalAlignment="Left" Height="30" Margin="9,41,0,0" VerticalAlignment="Top" Width="65"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="200" Margin="25,279,0,0" VerticalAlignment="Top" Width="735">
+            <TextBox HorizontalAlignment="Left" Height="25" Margin="74,-146,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        </Border>
+        <DataGrid HorizontalAlignment="Left" Height="195" Margin="25,484,0,0" VerticalAlignment="Top" Width="735"/>
+
 
     </Grid>
 </Window>
