@@ -1,0 +1,3 @@
+﻿Class Busqueda
+
+End Class

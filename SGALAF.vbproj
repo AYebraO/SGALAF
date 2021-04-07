@@ -1,12 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop" ToolsVersion="Current">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>SGALAF</RootNamespace>
     <UseWPF>true</UseWPF>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Angel\Desktop\CONTROL DE CADENAS\1\SGALAF\Backup\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Remove="identificación-por-voz.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Import Include="System.Windows" />
     <Import Include="System.Windows.Controls" />
@@ -18,5 +22,7 @@
     <Import Include="System.Windows.Navigation" />
     <Import Include="System.Windows.Shapes" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Resource Include="identificación-por-voz.jpg" />
+  </ItemGroup>
 </Project>
