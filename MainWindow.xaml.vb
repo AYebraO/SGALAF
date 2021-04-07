@@ -1,8 +1,8 @@
 ﻿Class MainWindow
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        Dim C As Inicio
-        C = New Inicio
+        Dim C As Busqueda
+        C = New Busqueda
         C.Show()
 
     End Sub
