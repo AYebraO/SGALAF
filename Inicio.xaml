@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Sistema de Control para el Almacenamiento de Audios del Laboratorio de Acustica Forense" Height="579" Width="1004" Loaded="Window_Loaded">
     <Grid Margin="6,0,25,-16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="314*"/>
+            <RowDefinition Height="265*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="25*"/>
@@ -23,10 +27,10 @@
         <Label Content="Expediente:" HorizontalAlignment="Left" Height="26" Margin="444,74,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2"/>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="245,75,0,0" Text="Noemi Gonzalez" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Grid.Column="2"/>
         <Button x:Name="btnGuardarCaso" Content="Guardar Caso" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="695,75,0,0" VerticalAlignment="Top" Width="150"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="8,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="863"/>
+        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="8,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="863" Grid.RowSpan="2"/>
         <Label x:Name="lblNombre" Content="Nombre:" Grid.Column="2" HorizontalAlignment="Left" Margin="17,123,0,0" VerticalAlignment="Top" Height="21" Width="77" FontSize="10"/>
         <Label Content="Edad:" Grid.Column="2" HorizontalAlignment="Left" Margin="435,123,0,0" VerticalAlignment="Top" Height="26" Width="38" FontSize="10"/>
-        <Label Content="Genero:" Grid.Column="2" HorizontalAlignment="Left" Margin="21,144,0,0" VerticalAlignment="Top" Height="26" Width="58" FontSize="10"/>
+        <Label Content="Genero:" Grid.Column="2" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" Height="26" Width="58" FontSize="10"/>
         <Label Content="Ritmo:" Grid.Column="2" HorizontalAlignment="Left" Margin="26,171,0,0" VerticalAlignment="Top" FontSize="10"/>
         <Label Content="Acento:" Grid.Column="2" HorizontalAlignment="Left" Margin="426,147,0,0" VerticalAlignment="Top" FontSize="10"/>
         <Label Content="Pausas:" Grid.Column="2" HorizontalAlignment="Left" Margin="428,169,0,0" VerticalAlignment="Top" FontSize="10"/>
@@ -49,7 +53,8 @@
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="19" Margin="481,196,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="481,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
         <Button x:Name="btnGuardarPersona" Content="Guardar Persona" Grid.Column="2" HorizontalAlignment="Left" Height="48" Margin="733,174,0,0" VerticalAlignment="Top" Width="125"/>
-        <DataGrid Grid.Column="2" HorizontalAlignment="Left" Height="195" Margin="26,249,0,0" VerticalAlignment="Top" Width="832"/>
+        <DataGrid x:Name="dtPersona" Grid.Column="2" HorizontalAlignment="Left" Height="195" Margin="26,249,0,0" VerticalAlignment="Top" Width="832" Grid.RowSpan="2"/>
+        <Button x:Name="btnReproducirAudio" Content="Reproducir" Grid.Column="2" HorizontalAlignment="Left" Margin="715,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>
 
     </Grid>
 </Window>

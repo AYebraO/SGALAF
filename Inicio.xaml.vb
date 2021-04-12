@@ -1,7 +1,18 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Data
+Imports System.Data.OleDb
+Imports System.Media.SoundPlayer
 
 
 Public Class Inicio
+
+
+
+    Private Sub Inicio_Loaded(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles MyBase.Loaded
+
+
+        dtPersona.SetBinding(Persona, "Persona")
+    End Sub
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
 
     End Sub
@@ -29,8 +40,6 @@ Public Class Inicio
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
 
-
-
         Dim Msg, Style, Title, Ctxt, Response, MyString
         Msg = "Agregar nuevo caso,  Deseas Continuar?"    ' Define message.
         Style = vbYesNo     ' Define buttons.
@@ -47,6 +56,15 @@ Public Class Inicio
     End Sub
 
     Private Sub btnGuardarCaso_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardarCaso.Click
+
+    End Sub
+
+    Private Sub Persona(sender As Object, e As AddingNewItemEventArgs)
+
+    End Sub
+
+    Private Sub btnReproducirAudio_Click(sender As Object, e As RoutedEventArgs) Handles btnReproducirAudio.Click
+
 
     End Sub
 End Class
