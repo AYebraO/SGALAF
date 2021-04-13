@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGALAF"
         mc:Ignorable="d"
-        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="464" Width="1134">
+        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="483" Width="1134">
     <Grid Margin="10,10,10,17">
         <Label Content="Sistema de control para el almacenamiento de  Audios" HorizontalAlignment="Left" Height="60" Margin="253,24,0,0" VerticalAlignment="Top" Width="624" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
         <Image HorizontalAlignment="Left" Height="320" Margin="280,69,0,0" VerticalAlignment="Top" Width="534" Source="/identificación-por-voz.jpg"/>
