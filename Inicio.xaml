@@ -53,7 +53,7 @@
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="19" Margin="481,196,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="481,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
         <Button x:Name="btnGuardarPersona" Content="Guardar Persona" Grid.Column="2" HorizontalAlignment="Left" Height="48" Margin="733,174,0,0" VerticalAlignment="Top" Width="125"/>
-        <DataGrid x:Name="dtPersona" Grid.Column="2" HorizontalAlignment="Left" Height="198" Margin="26,249,0,0" VerticalAlignment="Top" Width="842" Grid.RowSpan="2"/>
+        <DataGrid x:Name="dtPersona" ItemsSource="{Binding}" Grid.Column="2" HorizontalAlignment="Left" Height="198" Margin="24,249,0,0" VerticalAlignment="Top" Width="842" Grid.RowSpan="2"/>
         <Button x:Name="btnReproducirAudio" Content="Reproducir" Grid.Column="2" HorizontalAlignment="Left" Margin="715,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>
 
     </Grid>
