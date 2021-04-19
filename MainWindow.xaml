@@ -11,5 +11,6 @@
         <Image HorizontalAlignment="Left" Height="320" Margin="280,69,0,0" VerticalAlignment="Top" Width="534" Source="/identificación-por-voz.jpg"/>
         <Button x:Name="btnNuevoCaso" Content="Registrar Nuevo Caso " HorizontalAlignment="Left" Height="25" Margin="310,349,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_1"/>
         <Button x:Name="btnBusqueda" Content="Buscar Caso, Persona o Audio" HorizontalAlignment="Left" Height="25" Margin="565,349,0,0" VerticalAlignment="Top" Width="235"/>
+        <DataGrid Margin="27,82,834,82"/>
     </Grid>
 </Window>

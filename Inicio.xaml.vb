@@ -28,7 +28,7 @@ Public Class Inicio
     Private Sub Inicio_Loaded(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles MyBase.Loaded
 
         myConn = New SqlConnection("Initial Catalog=dbLAF;" &
-                                   "Data Source=localhost;Integrated Security=SSPI;")
+                                   "Data Source=192.168.234.8;Integrated Security=SSPI;")
         myCmd = myConn.CreateCommand
         myCmd.CommandText = "SELECT nombre, edad FROM Persona"
 
@@ -68,10 +68,10 @@ Public Class Inicio
         InitializeComponent()
 
         'GetData() creates a collection of Customer data from a database
-        Dim custdata As ObservableCollection(Of Persona) = GetData()
+        'Dim custdata As ObservableCollection(Of Persona) = GetData()
 
         'Bind the DataGrid to the customer data
-        dtPersona.DataContext = custdata
+        'dtPersona.DataContext = custdata
 
 
     End Sub
@@ -106,9 +106,9 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub Persona(sender As Object, e As AddingNewItemEventArgs)
+    'Private Sub Persona(sender As Object, e As AddingNewItemEventArgs)
 
-    End Sub
+    'End Sub
 
     Private Sub btnReproducirAudio_Click(sender As Object, e As RoutedEventArgs) Handles btnReproducirAudio.Click
 
