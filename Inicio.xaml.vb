@@ -6,6 +6,8 @@ Imports System.Collections.ObjectModel
 Imports System.Diagnostics
 
 
+
+
 Public Class Inicio
 
 
@@ -14,15 +16,8 @@ Public Class Inicio
     Private myCmd As SqlCommand
     Private myReader As SqlDataReader
     Private results As String
-
-    'Defines the customer object
-    Public Class Persona
-        Public Property Nombre() As String
-        Public Property Edad() As Int32
-        Public Property Genero() As String
-        Public Property Acento() As String
-        Public Property ritmo() As String
-    End Class
+    Private Caso As New LAFCDCasos
+    Private Persona As New LAFCDPersona
 
 
     Private Sub Inicio_Loaded(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles MyBase.Loaded
@@ -30,7 +25,7 @@ Public Class Inicio
         myConn = New SqlConnection("Initial Catalog=dbLAF;" &
                                    "Data Source=192.168.234.8;Integrated Security=SSPI;")
         myCmd = myConn.CreateCommand
-        myCmd.CommandText = "SELECT nombre, edad FROM Persona"
+        myCmd.CommandText = "SELECT numero, Propietario FROM Caso"
 
         'Open the connection.
         myConn.Open()
@@ -42,17 +37,23 @@ Public Class Inicio
         'Concatenate the query result into a string.
         Do While myReader.Read()
             results = results & myReader.GetString(0) & vbTab &
-            myReader.GetInt32(1) & vbLf
+            myReader.GetString(1) & vbLf
         Loop
+
         'Display results.
         MessageBox.Show(results)
         'Set the DataGrid's DataContext to be a filled DataTable
-        'dtPersona.DataContext = Personadata
+        dtCasos.DataContext = Caso.ListarCasos.Tables("Caso")
+
+
+        dtPersona.DataContext = Persona.ListarPersonas(2).Tables("Persona")
+
+
         'Close the reader and the database connection.
         myReader.Close()
         myConn.Close()
 
-        'dtPersona.SetBinding(Persona, "Persona")
+
     End Sub
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
 
@@ -65,17 +66,6 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub btnGuardarPersona_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardarPersona.Click
-        InitializeComponent()
-
-        'GetData() creates a collection of Customer data from a database
-        'Dim custdata As ObservableCollection(Of Persona) = 'GetData()
-
-        'Bind the DataGrid to the customer data
-        'dtPersona.DataContext = custdata
-
-
-    End Sub
 
     Private Sub txtEdad_KeyUp(sender As Object, e As KeyEventArgs) Handles txtEdad.KeyUp
         If Not IsNumeric(txtEdad.Text) Then
@@ -108,8 +98,4 @@ Public Class Inicio
     End Sub
 
 
-    Private Sub btnReproducirAudio_Click(sender As Object, e As RoutedEventArgs) Handles btnReproducirAudio.Click
-
-
-    End Sub
 End Class

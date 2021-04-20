@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGALAF"
         mc:Ignorable="d"
-        Title="Sistema de Control para el Almacenamiento de Audios del Laboratorio de Acustica Forense" Height="579" Width="1004" Loaded="Window_Loaded">
-    <Grid Margin="6,0,25,-16">
+        Title="Sistema de Control para el Almacenamiento de Audios del Laboratorio de Acustica Forense" Height="658" Width="1004" Loaded="Window_Loaded">
+    <Grid Margin="6,0,10,162">
         <Grid.RowDefinitions>
             <RowDefinition Height="314*"/>
             <RowDefinition Height="265*"/>
@@ -18,43 +18,44 @@
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Sistema de Control de Audios del Laboratorio de Acustica Forense" HorizontalAlignment="Left" Height="34" Margin="18,10,0,0" VerticalAlignment="Top" Width="690" FontSize="20" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="40" Margin="7,70,0,0" VerticalAlignment="Top" Width="864" Grid.Column="2">
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="544,4,0,0" Text="C.I. 123456/2021" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" TextChanged="TextBox_TextChanged"/>
-        </Border>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="44,75,0,0" Text="1-21-CLII-LAF" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Grid.Column="2"/>
-        <Label Content="Caso:&#xA;" HorizontalAlignment="Left" Height="25" Margin="9,75,0,0" VerticalAlignment="Top" Width="40" Grid.Column="2"/>
-        <Label Content="Propietario:&#xA;" HorizontalAlignment="Left" Height="30" Margin="169,75,0,0" VerticalAlignment="Top" Width="105" Grid.Column="2"/>
-        <Label Content="Expediente:" HorizontalAlignment="Left" Height="26" Margin="444,74,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="245,75,0,0" Text="Noemi Gonzalez" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Grid.Column="2"/>
-        <Button x:Name="btnGuardarCaso" Content="Guardar Caso" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="695,75,0,0" VerticalAlignment="Top" Width="150"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="344" Margin="8,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="863" Grid.RowSpan="2"/>
-        <Label x:Name="lblNombre" Content="Nombre:" Grid.Column="2" HorizontalAlignment="Left" Margin="17,123,0,0" VerticalAlignment="Top" Height="21" Width="77" FontSize="10"/>
-        <Label Content="Edad:" Grid.Column="2" HorizontalAlignment="Left" Margin="435,123,0,0" VerticalAlignment="Top" Height="26" Width="38" FontSize="10"/>
-        <Label Content="Genero:" Grid.Column="2" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" Height="26" Width="58" FontSize="10"/>
-        <Label Content="Ritmo:" Grid.Column="2" HorizontalAlignment="Left" Margin="26,171,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Content="Acento:" Grid.Column="2" HorizontalAlignment="Left" Margin="426,147,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Content="Pausas:" Grid.Column="2" HorizontalAlignment="Left" Margin="428,169,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Content="Tono:" Grid.Column="2" HorizontalAlignment="Left" Margin="31,192,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Content="Muletillas:" Grid.Column="2" HorizontalAlignment="Left" Margin="415,193,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Content="Lenguaje:" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="14,211,0,0" VerticalAlignment="Top" Width="109" FontSize="10"/>
-        <Label Content="Educacion:" Grid.Column="2" HorizontalAlignment="Left" Margin="413,215,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="69,123,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="69,144,0,0" VerticalAlignment="Top" Width="321">
-            <ListBoxItem Content="--No definido--"/>
-            <ListBoxItem Content="Femenino"/>
-            <ListBoxItem Content="Masculino"/>
-        </ComboBox>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="19" Margin="69,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="18" Margin="69,197,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="69,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <TextBox x:Name="txtEdad" Grid.Column="2" HorizontalAlignment="Left" Height="19" Margin="481,122,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="481,146,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="481,171,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="19" Margin="481,196,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="481,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
-        <Button x:Name="btnGuardarPersona" Content="Guardar Persona" Grid.Column="2" HorizontalAlignment="Left" Height="48" Margin="733,174,0,0" VerticalAlignment="Top" Width="125"/>
-        <DataGrid x:Name="dtPersona" ItemsSource="{Binding}" Grid.Column="2" HorizontalAlignment="Left" Height="198" Margin="24,249,0,0" VerticalAlignment="Top" Width="842" Grid.RowSpan="2"/>
-        <Button x:Name="btnReproducirAudio" Content="Reproducir" Grid.Column="2" HorizontalAlignment="Left" Margin="715,210,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Canvas Grid.Column="2" HorizontalAlignment="Left" Height="149" Margin="10,53,0,0" VerticalAlignment="Top" Width="875" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Button x:Name="btnGuardarCaso" Content="Guardar Caso" Height="24" Width="150" Canvas.Left="715" Canvas.Top="11"/>
+            <TextBox Height="25" Text="1-21-CLII-LAF" TextWrapping="Wrap" Width="119" Canvas.Left="43" Canvas.Top="10"/>
+            <Label Content="Caso:&#xA;" Height="25" Width="40" Canvas.Left="8" Canvas.Top="10"/>
+            <Label Content="Propietario:&#xA;" Height="30" Width="105" Canvas.Left="168" Canvas.Top="10"/>
+            <TextBox Height="24" Text="Noemi Gonzalez" TextWrapping="Wrap" Width="126" Canvas.Left="244" Canvas.Top="10"/>
+            <TextBox Height="25" Text="123465/2021" TextWrapping="Wrap" Width="170" Canvas.Left="500" Canvas.Top="13"/>
+            <Label Content="Expediente:&#xA;" Height="25" Width="80" Canvas.Left="390" Canvas.Top="13"/>
+            <DataGrid x:Name="dtCasos" Height="85" Width="855" Canvas.Left="10" Canvas.Top="54"/>
+        </Canvas>
+        <Canvas Grid.Column="2" HorizontalAlignment="Left" Height="391" Margin="10,228,0,0" VerticalAlignment="Top" Width="873" Grid.RowSpan="2" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Label x:Name="lblNombre" Content="Nombre:" Height="21" Width="77" FontSize="10" Canvas.Left="30" Canvas.Top="17"/>
+            <Label Content="Edad:" Height="26" Width="38" FontSize="10" Canvas.Left="454" Canvas.Top="17"/>
+            <Label Content="Genero:" Height="26" Width="58" FontSize="10" Canvas.Left="34" Canvas.Top="37"/>
+            <Label Content="Ritmo:" FontSize="10" Canvas.Left="39" Canvas.Top="65"/>
+            <Label Content="Acento:" FontSize="10" Canvas.Left="445" Canvas.Top="41"/>
+            <Label Content="Pausas:" FontSize="10" Canvas.Left="447" Canvas.Top="63"/>
+            <Label Content="Tono:" FontSize="10" Canvas.Left="42" Canvas.Top="86"/>
+            <Label Content="Muletillas:" FontSize="10" Canvas.Left="434" Canvas.Top="87"/>
+            <Label Content="Lenguaje:" Height="23" Width="109" FontSize="10" Canvas.Left="27" Canvas.Top="104"/>
+            <Label Content="Educacion:" FontSize="10" Canvas.Left="432" Canvas.Top="108"/>
+            <TextBox Text="TextBox" TextWrapping="Wrap" Width="321" Canvas.Left="82" Canvas.Top="17"/>
+            <ComboBox Width="321" Canvas.Left="82" Canvas.Top="38">
+                <ListBoxItem Content="--No definido--"/>
+                <ListBoxItem Content="Femenino"/>
+                <ListBoxItem Content="Masculino"/>
+            </ComboBox>
+            <TextBox Height="19" Text="TextBox" TextWrapping="Wrap" Width="321" Canvas.Left="82" Canvas.Top="67"/>
+            <TextBox Height="18" Text="TextBox" TextWrapping="Wrap" Width="321" Canvas.Left="82" Canvas.Top="91"/>
+            <TextBox Height="17" Text="TextBox" TextWrapping="Wrap" Width="321" Canvas.Left="82" Canvas.Top="113"/>
+            <TextBox x:Name="txtEdad" Height="19" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="16"/>
+            <TextBox Height="20" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="40"/>
+            <TextBox Height="20" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="65"/>
+            <TextBox Height="19" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="90"/>
+            <TextBox Height="17" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="113"/>
+            <DataGrid x:Name="dtPersona" ItemsSource="{Binding}" Height="191" Width="796" Canvas.Left="34" Canvas.Top="170"/>
+            <Button Content="Button" Height="45" Width="50" Canvas.Left="797" Canvas.Top="54"/>
+        </Canvas>
 
     </Grid>
 </Window>

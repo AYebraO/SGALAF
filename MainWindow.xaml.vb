@@ -11,7 +11,5 @@
         Dim C As Inicio
         C = New Inicio
         C.Show()
-
-
     End Sub
 End Class
