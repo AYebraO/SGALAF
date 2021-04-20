@@ -43,7 +43,8 @@ Public Class Inicio
         'Display results.
         MessageBox.Show(results)
         'Set the DataGrid's DataContext to be a filled DataTable
-        dtCasos.DataContext = Caso.ListarCasos.Tables("Caso")
+        dtCasos.DataContext = Caso.ListarCasos
+
 
 
         dtPersona.DataContext = Persona.ListarPersonas(2).Tables("Persona")

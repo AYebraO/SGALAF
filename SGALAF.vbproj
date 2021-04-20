@@ -26,9 +26,6 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.vbproj" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="identificación-por-voz.jpg" />
   </ItemGroup>
   <ItemGroup>

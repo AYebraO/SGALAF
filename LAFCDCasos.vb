@@ -6,15 +6,13 @@ Public Class LAFCDCasos
     Dim da As SqlDataAdapter
     Dim Conexion As New LAFConexion
 
-
-
     Public Function ListarCasos() As DataSet
 
         Dim ds As New DataSet
         cn = Conexion.Conectar()
 
         da = New SqlDataAdapter("sp_ListarCasos", cn)
-        da.Fill(ds, "Caso")
+        da.Fill(ds, "Casos")
         Return ds
 
         ds.Dispose()
