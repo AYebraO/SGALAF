@@ -26,7 +26,7 @@
             <TextBox x:Name="txtPropietario" Height="24" Text="Noemi Gonzalez" TextWrapping="Wrap" Width="126" Canvas.Left="244" Canvas.Top="10"/>
             <TextBox x:Name="txtExpediente" Height="25" Text="123465/2021" TextWrapping="Wrap" Width="170" Canvas.Left="500" Canvas.Top="13"/>
             <Label Content="Expediente:&#xA;" Height="25" Width="80" Canvas.Left="390" Canvas.Top="13"/>
-            <DataGrid x:Name="dtCasos" Height="85" Width="855" Canvas.Left="10" Canvas.Top="54"/>
+            <DataGrid x:Name="dtCasos" ItemsSource="{Binding}" Height="85" Width="855" Canvas.Left="10" Canvas.Top="54" IsReadOnly="True"/>
         </Canvas>
         <Canvas Grid.Column="2" HorizontalAlignment="Left" Height="391" Margin="10,228,0,0" VerticalAlignment="Top" Width="873" Grid.RowSpan="2" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
             <Label x:Name="lblNombre" Content="Nombre:" Height="21" Width="77" FontSize="10" Canvas.Left="30" Canvas.Top="17"/>
@@ -54,7 +54,7 @@
             <TextBox Height="19" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="90"/>
             <TextBox Height="17" Text="TextBox" TextWrapping="Wrap" Width="234" Canvas.Left="500" Canvas.Top="113"/>
             <DataGrid x:Name="dtPersona" ItemsSource="{Binding}" Height="191" Width="796" Canvas.Left="34" Canvas.Top="170"/>
-            <Button Content="Button" Height="45" Width="50" Canvas.Left="797" Canvas.Top="54"/>
+            <Button x:Name="btnGuardarPersona" Content="Button" Height="45" Width="50" Canvas.Left="797" Canvas.Top="54"/>
         </Canvas>
 
     </Grid>

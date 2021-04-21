@@ -17,43 +17,14 @@ Public Class Inicio
     Private myReader As SqlDataReader
     Private results As String
 
-    Private Persona As New LAFCDPersona
+
 
 
     Private Sub Inicio_Loaded(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles MyBase.Loaded
+        Dim Caso As New LAFCDCasos
         InitializeComponent()
-        myConn = New SqlConnection("Initial Catalog=dbLAF;" &
-                                   "Data Source=192.168.234.8;Integrated Security=SSPI;")
-        myCmd = myConn.CreateCommand
-        myCmd.CommandText = "SELECT numero, Propietario FROM Caso"
 
-        'Open the connection.
-        myConn.Open()
-
-        myReader = myCmd.ExecuteReader()
-
-
-
-        'Concatenate the query result into a string.
-        Do While myReader.Read()
-            results = results & myReader.GetString(0) & vbTab &
-            myReader.GetString(1) & vbLf
-        Loop
-
-        'Display results.
-        MessageBox.Show(results)
-        'Set the DataGrid's DataContext to be a filled DataTable
-
-
-
-
-        dtPersona.DataContext = Persona.ListarPersonas(2).Tables("Persona")
-
-
-        'Close the reader and the database connection.
-        myReader.Close()
-        myConn.Close()
-
+        dtCasos.DataContext = Caso.ListarCasos.Tables("Casos")
 
     End Sub
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
@@ -98,18 +69,39 @@ Public Class Inicio
         Dim Caso As New LAFCDCasos
         Dim Nuevo As New EntidadCaso(0, txtNumeroCaso.Text, txtPropietario.Text, txtExpediente.Text, DateAndTime.Today, "System", DateAndTime.Today, "System")
 
-
-
-
         Caso.InsertarCaso(Nuevo)
 
-
-
         'Cargamos los casos
-        dtCasos.DataContext = Caso.ListarCasos
+        dtCasos.DataContext = Caso.ListarCasos.Tables("Casos")
 
 
     End Sub
 
+    Private Sub btnGuardarPersona_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardarPersona.Click
+        Dim Caso As New LAFCDCasos
+        Dim Persona As New LAFCDPersona
 
+        'Cargamos los casos
+        dtCasos.DataContext = Caso.ListarCasos.Tables("Casos")
+        dtPersona.DataContext = Persona.ListarPersonas(2).Tables("Persona")
+    End Sub
+
+    Private Sub dtCasos_MouseDoubleClick(sender As Object, e As MouseButtonEventArgs) Handles dtCasos.MouseDoubleClick
+        Dim Msg, Style, Title, Ctxt, Response, MyString
+        Msg = "Va a editar el registro,  Desea Continuar?"    ' Define message.
+        Style = vbYesNo     ' Define buttons.
+        Title = "Confirmacion"    ' Define title.
+        Ctxt = 1000    ' Define topic context. 
+        ' Display message.
+        Response = MessageBox.Show(Msg, Title, Style)
+
+        If Response = vbYes Then    ' User chose Yes.
+            txtNumeroCaso.Text = dtCasos.SelectedItem.GetHashCode
+
+
+
+        Else    ' User chose No.
+            MyString = "No"    ' Perform some action.
+        End If
+    End Sub
 End Class
