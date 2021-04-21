@@ -34,6 +34,8 @@ Public Class Inicio
 
 
 
+
+
         'Concatenate the query result into a string.
         Do While myReader.Read()
             results = results & myReader.GetString(0) & vbTab &
