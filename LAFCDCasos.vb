@@ -22,13 +22,13 @@ Public Class LAFCDCasos
     End Function
 
     'Funcion para insertar un nuevo Caso, recibe los elementos a insertar desde Inicio.xaml.vb
-    Public Function InsertarCaso(Caso As DataSet)
+    Public Function InsertarCaso(Caso As EntidadCaso)
         Dim ds As New DataSet
         cn = Conexion.Conectar()
 
-        da = New SqlDataAdapter("sp_ListarCasos", cn)
-        da.Fill(ds, "Caso")
-        Return ds
+        da = New SqlDataAdapter("sp_CrearCasos " + Caso.Insert, cn)
+        da.Fill(ds)
+        'Return ds
 
         ds.Dispose()
         da.Dispose()

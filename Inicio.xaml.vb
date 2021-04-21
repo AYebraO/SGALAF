@@ -16,7 +16,7 @@ Public Class Inicio
     Private myCmd As SqlCommand
     Private myReader As SqlDataReader
     Private results As String
-    Private Caso As New LAFCDCasos
+
     Private Persona As New LAFCDPersona
 
 
@@ -45,7 +45,7 @@ Public Class Inicio
         'Display results.
         MessageBox.Show(results)
         'Set the DataGrid's DataContext to be a filled DataTable
-        dtCasos.DataContext = Caso.ListarCasos
+
 
 
 
@@ -97,6 +97,19 @@ Public Class Inicio
     End Sub
 
     Private Sub btnGuardarCaso_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardarCaso.Click
+        Dim Caso As New LAFCDCasos
+        Dim Nuevo As New EntidadCaso(0, txtNumeroCaso.Text, txtPropietario.Text, txtExpediente.Text, DateAndTime.Today, "System", DateAndTime.Today, "System")
+
+
+
+
+        Caso.InsertarCaso(Nuevo)
+
+
+
+        'Cargamos los casos
+        dtCasos.DataContext = Caso.ListarCasos
+
 
     End Sub
 

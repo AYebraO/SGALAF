@@ -20,11 +20,11 @@
         <Label Content="Sistema de Control de Audios del Laboratorio de Acustica Forense" HorizontalAlignment="Left" Height="34" Margin="18,10,0,0" VerticalAlignment="Top" Width="690" FontSize="20" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Canvas Grid.Column="2" HorizontalAlignment="Left" Height="149" Margin="10,53,0,0" VerticalAlignment="Top" Width="875" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
             <Button x:Name="btnGuardarCaso" Content="Guardar Caso" Height="24" Width="150" Canvas.Left="715" Canvas.Top="11"/>
-            <TextBox Height="25" Text="1-21-CLII-LAF" TextWrapping="Wrap" Width="119" Canvas.Left="43" Canvas.Top="10"/>
+            <TextBox x:Name="txtNumeroCaso" Height="25" Text="1-21-CLII-LAF" TextWrapping="Wrap" Width="119" Canvas.Left="43" Canvas.Top="10"/>
             <Label Content="Caso:&#xA;" Height="25" Width="40" Canvas.Left="8" Canvas.Top="10"/>
             <Label Content="Propietario:&#xA;" Height="30" Width="105" Canvas.Left="168" Canvas.Top="10"/>
-            <TextBox Height="24" Text="Noemi Gonzalez" TextWrapping="Wrap" Width="126" Canvas.Left="244" Canvas.Top="10"/>
-            <TextBox Height="25" Text="123465/2021" TextWrapping="Wrap" Width="170" Canvas.Left="500" Canvas.Top="13"/>
+            <TextBox x:Name="txtPropietario" Height="24" Text="Noemi Gonzalez" TextWrapping="Wrap" Width="126" Canvas.Left="244" Canvas.Top="10"/>
+            <TextBox x:Name="txtExpediente" Height="25" Text="123465/2021" TextWrapping="Wrap" Width="170" Canvas.Left="500" Canvas.Top="13"/>
             <Label Content="Expediente:&#xA;" Height="25" Width="80" Canvas.Left="390" Canvas.Top="13"/>
             <DataGrid x:Name="dtCasos" Height="85" Width="855" Canvas.Left="10" Canvas.Top="54"/>
         </Canvas>
