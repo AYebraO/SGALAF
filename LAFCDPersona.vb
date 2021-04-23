@@ -20,4 +20,22 @@ Public Class LAFCDPersona
 
     End Function
 
+    'Funcion para insertar una nueva Persona , recibe los elementos a insertar desde Inicio.xaml.vb
+    Public Function InsertarPersona(Persona As EntidadPersona) As Boolean
+
+        Dim ds As New DataSet
+        cn = Conexion.Conectar()
+
+        da = New SqlDataAdapter("sp_CrearPersonas " + Persona.Insert, cn)
+        da.Fill(ds)
+        'Return ds
+
+        Return True
+
+        ds.Dispose()
+        da.Dispose()
+        cn.Dispose()
+
+    End Function
+
 End Class
