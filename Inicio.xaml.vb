@@ -99,7 +99,7 @@ Public Class Inicio
         Dim Caso As New LAFCDCasos
         If dtCasos.SelectedItem IsNot Nothing Then
 
-            Msg = "Va a Agregar personas al Caso Seleccionado,  Desea Continuar?"    ' Define message.
+            Msg = "Va a Agregar personas al Caso Seleccionado,  esta seguro que Desea Continuar?"    ' Define message.
             Style = vbYesNo     ' Define buttons.
             Title = "Confirmacion"    ' Define title.
             Ctxt = 1000    ' Define topic context. 
