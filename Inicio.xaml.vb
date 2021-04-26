@@ -21,7 +21,7 @@ Public Class Inicio
 
 
     Private Sub Inicio_Loaded(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles MyBase.Loaded
-        Dim Caso As New LAFCDCasos
+        Dim Persona As New LAFCDPersona
         InitializeComponent()
         'myConn = New SqlConnection("Initial Catalog=dbLAF;Data Source=192.168.234.8;Integrated Security=SSPI;")
         myConn = New SqlConnection("Database=dbLAF;Server=192.168.234.8;User Id=sa; Password=123; Trusted_Connection=False; MultipleActiveResultSets=true;")

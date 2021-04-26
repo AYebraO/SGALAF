@@ -10,6 +10,6 @@
         <Label Content="Sistema de control para el almacenamiento de  Audios" HorizontalAlignment="Left" Height="60" Margin="253,24,0,0" VerticalAlignment="Top" Width="624" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
         <Image HorizontalAlignment="Left" Height="320" Margin="280,69,0,0" VerticalAlignment="Top" Width="534" Source="/identificación-por-voz.jpg"/>
         <Button x:Name="btnNuevoCaso" Content="Registrar Nuevo Caso " HorizontalAlignment="Left" Height="25" Margin="310,349,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_1"/>
-        <Button x:Name="btnBusqueda" Content="Buscar Caso, Persona o Audio" HorizontalAlignment="Left" Height="25" Margin="565,349,0,0" VerticalAlignment="Top" Width="235"/>
+        <Button x:Name="btnBusqueda" Content="Buscar Caso, Persona o Audio" HorizontalAlignment="Left" Height="25" Margin="565,349,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click_Buscar"/>
     </Grid>
 </Window>
