@@ -109,21 +109,14 @@ Public Class Inicio
 
 
             If Response = vbYes Then    ' User chose Yes.
-                'txtNumeroCaso.Text = dtCasos.SelectedItem.GetHashCode
-                cvsPersona.IsEnabled = True
+                txtNumeroCaso.Text = dtCasos.SelectedItem.GetHashCode
 
 
-                lblCaso.Content = dtCasos.Columns(1).GetCellContent(dtCasos.SelectedItem)
-                lblIdCaso.Content = dtCasos.Columns(0).GetCellContent(dtCasos.SelectedItem)
-                intCaso = CInt(lblIdCaso.Content.Text)
 
-                dtPersona.DataContext = Persona.ListarPersonas(intCaso).Tables("Persona")
             Else    ' User chose No.
                 MyString = "No"    ' Perform some action.
             End If
-            dtCasos.DataContext = Caso.ListarCasos.Tables("Casos")
-            dtCasos.SelectedItem = Nothing
-
-        End If
     End Sub
-End Class
+    If Response = vbYes Then    ' User chose Yes.
+                'txtNumeroCaso.Text = dtCasos.SelectedItem.GetHashCode
+                cvsPersona.IsEnabled = True
