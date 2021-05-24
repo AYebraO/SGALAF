@@ -39,4 +39,21 @@ Public Class LAFCDCasos
 
     End Function
 
+    Public Function ActualizarCaso(Caso As EntidadCaso) As Boolean
+
+        Dim ds As New DataSet
+        cn = Conexion.Conectar()
+
+        da = New SqlDataAdapter("sp_ActualizarCasos " + Caso.Update, cn)
+        da.Fill(ds)
+        'Return ds
+
+        Return True
+
+        ds.Dispose()
+        da.Dispose()
+        cn.Dispose()
+
+    End Function
+
 End Class

@@ -30,6 +30,18 @@
 
     End Function
 
+    Public Function Update() As String
+        Dim Cadena As String
+
+        Cadena = idPersona.ToString + ",'" + Nombre + "', '" + Genero + "', " + Edad.ToString +
+            ", '" + Acento + "', '" + Ritmo + "', '" + Pausas + "', '" + Tono + "', '" + Muletillas +
+            "', '" + TipoLenguaje + "', '" + Entorno + "', '" + UsuarioMod + "', '" + FechaMod.ToString("yyyy-MM-dd") + "'"
+
+        Return Cadena
+
+
+    End Function
+
 
     Public Sub New(idPersona As Integer, idCaso As Integer, nombre As String, genero As String, edad As Integer, acento As String, ritmo As String, pausas As String, tono As String, muletillas As String, tipoLenguaje As String, entorno As String, fechaCrear As Date, usuarioCrear As String, fechaMod As Date, usuarioMod As String)
         Me.IdPersona1 = idPersona

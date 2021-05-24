@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGALAF"
         mc:Ignorable="d"
-        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="483" Width="1134">
+        Title="SISTEMA ESPECIALIZADO EN CONTROL DE ESTADISTICA DE ARCHIVOS DE AUDIO" Height="483" Width="1134" WindowState="Maximized" Closing="Window_Closing" Initialized="Window_Initialized">
     <Grid Margin="10,10,10,17">
-        <Label Content="Sistema de control para el almacenamiento de  Audios" HorizontalAlignment="Left" Height="60" Margin="253,24,0,0" VerticalAlignment="Top" Width="624" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
-        <Image HorizontalAlignment="Left" Height="320" Margin="280,69,0,0" VerticalAlignment="Top" Width="534" Source="/identificación-por-voz.jpg"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="575*"/>
+            <ColumnDefinition Width="375*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="99*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Sistema de control para el almacenamiento de  Audios" HorizontalAlignment="Left" Height="60" Margin="253,24,0,0" VerticalAlignment="Top" Width="624" FontSize="22" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="320" Margin="280,69,0,0" VerticalAlignment="Top" Width="534" Source="/identificación-por-voz.jpg" Grid.ColumnSpan="2"/>
         <Button x:Name="btnNuevoCaso" Content="Registrar Nuevo Caso " HorizontalAlignment="Left" Height="25" Margin="310,349,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_1"/>
-        <Button x:Name="btnBusqueda" Content="Buscar Caso, Persona o Audio" HorizontalAlignment="Left" Height="25" Margin="565,349,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click_Buscar"/>
+        <Button x:Name="btnBusqueda" Content="Buscar Caso, Persona o Audio" HorizontalAlignment="Left" Height="25" Margin="565,349,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click_Buscar" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

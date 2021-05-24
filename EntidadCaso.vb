@@ -19,6 +19,18 @@
 
     End Function
 
+    Public Function Update() As String
+        Dim Cadena As String
+
+        Cadena = IdCaso.ToString + ", '" + Numero + "', '" + Propietario + "', '" + Expediente + "', '" + FechaMod.ToString("yyyy-MM-dd") + "', '" + UsuarioMod + "'"
+
+
+
+        Return Cadena
+
+
+    End Function
+
     Public Sub New(idCaso As Integer, numero As String, propietario As String, expediente As String, fechaCrear As Date, usuarioCrear As String, fechaMod As Date, usuarioMod As String)
         Me.IdCaso1 = idCaso
         Me.Numero1 = numero

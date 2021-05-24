@@ -38,4 +38,21 @@ Public Class LAFCDPersona
 
     End Function
 
+    Public Function ActualizarPersona(Persona As EntidadPersona) As Boolean
+
+        Dim ds As New DataSet
+        cn = Conexion.Conectar()
+
+        da = New SqlDataAdapter("sp_ActualizarPersonas " + Persona.Update, cn)
+        da.Fill(ds)
+        'Return ds
+
+        Return True
+
+        ds.Dispose()
+        da.Dispose()
+        cn.Dispose()
+
+    End Function
+
 End Class
